@@ -7,6 +7,7 @@ $('button').click(function(){
     return response.json();
 })
     .then(function(data){
-      console.log(data);
+      var Url = data.data[0].images.original.url;
+      $("body").append(`<img src="${Url}">`);
     });
 });
